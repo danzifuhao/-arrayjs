@@ -1,0 +1,21 @@
+//处理以下数组数据  得到一个包含所有元素的数组
+var data = [[1,2],3,[[[4]],5]]
+
+var dataArr =[]
+
+function add(arr){
+    if(arr.length == undefined){
+        dataArr.push(arr)
+    }else{
+        for(let j = 0;j<arr.length;j++){
+            add(arr[j])
+        }
+    }
+    console.log(1)
+}
+
+for(let i =0;i < data.length;i++){
+    add(data[i])
+}
+
+console.log(dataArr)
